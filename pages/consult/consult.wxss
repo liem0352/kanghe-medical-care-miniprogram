@@ -1,0 +1,104 @@
+.consult-banner {
+  padding: 20px;
+  text-align: center;
+}
+
+.video-consult-btn {
+  background: linear-gradient(135deg, #19be6b, #00aa6c);
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consult-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.doctor-item {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.doctor-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+}
+
+.doctor-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.doctor-details {
+  font-size: 13px;
+  color: #666;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.consult-buttons {
+  display: flex;
+}
+
+.consult-btn {
+  padding: 5px 12px;
+  font-size: 13px;
+  border-radius: 15px;
+  background: #f0f0f0;
+  color: #333;
+}
+
+.video-btn {
+  background: #19be6b;
+  color: white;
+  margin-left: 10px;
+}
+
+.consult-history {
+  margin-top: 10px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.history-date {
+  font-size: 12px;
+  color: #999;
+  width: 25%;
+}
+
+.history-detail {
+  width: 50%;
+}
+
+.history-type {
+  display: block;
+  font-size: 13px;
+  color: #666;
+}
+
+.history-status {
+  color: #19be6b;
+  font-size: 13px;
+}

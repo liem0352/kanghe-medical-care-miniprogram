@@ -1,0 +1,215 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 头部用户区域 -->
+  <view class="header">
+    <view class="user-area">
+      <view class="user-info">
+        <image class="user-avatar" src="/images/logo.png"></image>
+        <view class="user-text">
+          <text class="welcome-text">您好，</text>
+          <text class="user-name">{{user.name}}</text>
+          <view class="health-score-container">
+            <text class="health-score-label">健康指数</text>
+            <view class="health-score">{{healthScore}}<text class="score-unit">分</text></view>
+          </view>
+        </view>
+      </view>
+      <view class="weather-info">
+        <view class="weather-icon">☀️</view>
+        <view class="weather-details">
+          <text class="weather-city">{{city}}</text>
+          <text class="weather-temp">{{weatherData.temperature}}°C</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 健康概览卡片 -->
+  <view class="health-overview">
+    <view class="overview-header">
+      <text class="overview-title">健康概览</text>
+      <text class="update-time">最后更新: {{healthData.lastUpdate}}</text>
+    </view>
+    
+    <view class="vitals-grid">
+      <view class="vital-item" bindtap="showVitalDetail" data-type="heartRate">
+        <text class="vital-value">{{healthData.heartRate}}</text>
+        <text class="vital-label">心率</text>
+      </view>
+      <view class="vital-item" bindtap="showVitalDetail" data-type="bloodPressure">
+        <text class="vital-value">{{healthData.bloodPressure}}</text>
+        <text class="vital-label">血压</text>
+      </view>
+      <view class="vital-item" bindtap="showVitalDetail" data-type="bloodOxygen">
+        <text class="vital-value">{{healthData.bloodOxygen}}%</text>
+        <text class="vital-label">血氧</text>
+      </view>
+      <view class="vital-item" bindtap="showVitalDetail" data-type="steps">
+        <text class="vital-value">{{healthData.steps}}</text>
+        <text class="vital-label">步数</text>
+      </view>
+    </view>
+    
+    <view class="trend-card">
+      <view class="trend-header">
+        <text class="trend-title">健康趋势</text>
+        <text class="view-all" bindtap="viewHealthTrend">查看详情</text>
+      </view>
+      <view class="chart-container">
+        <canvas canvas-id="healthChart" id="healthChart" class="health-chart"></canvas>
+      </view>
+    </view>
+  </view>
+
+   <!-- 功能区域 -->
+   <!-- 健康服务卡片 -->
+<view class="services-section">
+  <view class="services-header">
+    <text class="section-title">健康服务</text>
+    <view class="reminder-header-actions">
+      <text class="view-all" bindtap="viewAllServices">全部服务</text>
+    </view>
+  </view>
+  <view class="services-grid">
+    <view class="service-item" bindtap="showServiceMenu" data-service="online-consultation">
+      <view class="service-icon">
+        <text>🩺</text>
+      </view>
+      <text class="service-name">在线问诊</text>
+    </view>
+    <view class="service-item" bindtap="showServiceMenu" data-service="medication-management">
+      <view class="service-icon">
+        <text>💊</text>
+      </view>
+      <text class="service-name">用药管理</text>
+    </view>
+    <view class="service-item" bindtap="showServiceMenu" data-service="appointment">
+      <view class="service-icon">
+        <text>📅</text>
+      </view>
+      <text class="service-name">预约挂号</text>
+    </view>
+    <view class="service-item" bindtap="showServiceMenu" data-service="health-record">
+      <view class="service-icon">
+        <text>📋</text>
+      </view>
+      <text class="service-name">健康档案</text>
+    </view>
+    <view class="service-item" bindtap="showServiceMenu" data-service="family-account">
+      <view class="service-icon">
+        <text>👨‍👩‍👧</text>
+      </view>
+      <text class="service-name">家庭账户</text>
+    </view>
+    <view class="service-item" bindtap="showServiceMenu" data-service="health-report">
+      <view class="service-icon">
+        <text>📊</text>
+      </view>
+      <text class="service-name">健康报告</text>
+    </view>
+    <view class="service-item" bindtap="showServiceMenu" data-service="exercise-plan">
+      <view class="service-icon">
+        <text>🏃</text>
+      </view>
+      <text class="service-name">运动计划</text>
+    </view>
+    <view class="service-item" bindtap="showServiceMenu" data-service="nutrition">
+      <view class="service-icon">
+        <text>🥗</text>
+      </view>
+      <text class="service-name">营养膳食</text>
+    </view>
+  </view>
+</view>
+
+  <!-- 今日提醒卡片 -->
+  <view class="reminders-section">
+    <view class="services-header">
+      <text class="section-title">今日提醒</text>
+      <view class="reminder-header-actions">
+        <text class="add-reminder" bindtap="showAddReminder">+ 添加</text>
+        <text class="view-all" bindtap="viewAllReminders">查看全部</text>
+      </view>
+    </view>
+    
+    <view class="reminder-list">
+      <block wx:for="{{reminders}}" wx:key="id">
+        <view style=" gap: 5vw;" class="reminder-item" data-id="{{item.id}}">
+          <view class="reminder-icon {{item.type}} {{item.recorded ? 'recorded' : ''}}">
+            <text wx:if="{{item.type === 'medication'}}">💊</text>
+            <text wx:if="{{item.type === 'appointment'}}">🏥</text>
+            <text wx:if="{{!item.type}}">⏰</text>
+          </view>
+          <view class="reminder-content">
+            <text class="reminder-title">{{item.title}}</text>
+            <text class="reminder-time">{{item.time}}</text>
+          </view>
+          <button style="width:15vw;display: flex;justify-content: center;align-items: center; "class="reminder-action" bindtap="toggleReminderStatus" data-id="{{item.id}}">
+            {{item.recorded ? '已记' : item.actionText}}
+          </button>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 紧急求助按钮 -->
+  <view class="emergency-btn" bindtap="showEmergency">
+    <text class="sos-text">SOS</text>
+  </view>
+
+  <!-- 紧急求助对话框 -->
+  <view class="emergency-modal" hidden="{{!showEmergencyModal}}">
+    <view class="modal-content">
+      <text class="modal-emergency-icon">🆘</text>
+      <view><text class="modal-title">紧急求助</text></view>
+      <text class="modal-text">确认发送紧急求助？我们将立即通知您的紧急联系人和社区医疗中心</text>
+      <view class="action-buttons">
+        <button class="modal-btn btn-cancel" bindtap="cancelEmergency">取消</button>
+        <button class="modal-btn btn-confirm" bindtap="confirmEmergency">确认求助</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 添加提醒对话框 -->
+  <view class="add-reminder-modal" hidden="{{!showAddReminderModal}}">
+    <view class="modal-content">
+      <text class="modal-title">添加新提醒</text>
+      
+      <view class="form-group">
+        <text class="form-label">提醒类型</text>
+        <picker bindchange="bindReminderTypeChange" value="{{reminderTypeIndex}}" range="{{reminderTypes}}">
+          <view class="form-input">{{reminderTypes[reminderTypeIndex]}}</view>
+        </picker>
+      </view>
+      
+      <view class="form-group">
+        <text class="form-label">提醒内容</text>
+        <input type="text" placeholder="例如: 服用降压药" value="{{newReminderContent}}" bindinput="bindReminderContentInput" class="form-input" />
+      </view>
+      
+      <view class="form-group">
+        <text class="form-label">提醒时间</text>
+        <picker mode="time" value="{{newReminderTime}}" bindchange="bindReminderTimeChange">
+          <view class="form-input">{{newReminderTime || '选择时间'}}</view>
+        </picker>
+      </view>
+      
+      <view class="form-buttons">
+        <button class="modal-btn btn-cancel" bindtap="cancelAddReminder">取消</button>
+        <button class="modal-btn btn-confirm" bindtap="addNewReminder">添加</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 健康指标详情 -->
+  <view class="vital-detail-modal" hidden="{{!showVitalDetail}}">
+    <view class="modal-content">
+      <text class="modal-title">{{currentVital.name}}详情</text>
+      <text class="vital-value">{{currentVital.value}}</text>
+      <text class="vital-desc">{{currentVital.desc}}</text>
+      <view class="action-buttons">
+        <button class="modal-btn btn-confirm" bindtap="hideVitalDetail">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

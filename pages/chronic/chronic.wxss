@@ -1,0 +1,321 @@
+/* pages/chronic/chronic.wxss */
+.chronic-page {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  padding-bottom: 100rpx;
+}
+
+.chronic-container {
+  height: calc(100vh - 60px);
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #19be6b;
+  color: white;
+  padding: 0 15px;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0 15px;
+  color: #333;
+}
+
+.condition-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.condition-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.condition-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.condition-img {
+  width: 24px;
+  height: 24px;
+}
+
+.condition-info {
+  flex: 1;
+}
+
+.condition-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.condition-days {
+  font-size: 13px;
+  color: #999;
+}
+
+.condition-status {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.condition-chart {
+  position: relative;
+  height: 150px;
+  margin: 20px 0;
+}
+
+.chart {
+  width: 100%;
+  height: 150px;
+}
+
+.condition-data {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.data-item {
+  text-align: center;
+}
+
+.data-label {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.data-value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.data-item:nth-child(1) .data-value {
+  color: #ff6b6b;
+}
+
+.data-item:nth-child(2) .data-value {
+  color: #19be6b;
+}
+
+.medication-management {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.medication-item {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.medication-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.medication-info {
+  flex: 1;
+}
+
+.medication-name {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.medication-dose {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.medication-next {
+  font-size: 12px;
+  color: #19be6b;
+  background: #e7f7f0;
+  padding: 2px 8px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.medication-actions {
+  align-self: center;
+}
+
+.medication-btn {
+  background: none;
+  border: 1px solid #19be6b;
+  color: #19be6b;
+  padding: 5px 12px;
+  font-size: 13px;
+  border-radius: 15px;
+}
+
+.health-goals {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.goal-card {
+  margin-bottom: 20px;
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.goal-title {
+  font-weight: bold;
+}
+
+.goal-progress {
+  color: #19be6b;
+  font-weight: bold;
+}
+
+.goal-desc {
+  font-size: 12px;
+  color: #999;
+  display: block;
+  margin-top: 5px;
+}
+
+.doctor-advice {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.advice-card {
+  padding: 15px;
+  background: #e8f4fe;
+  border-radius: 8px;
+}
+
+.advice-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.doctor-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.doctor-name {
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.advice-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.advice-content {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 添加记录模态框样式 */
+.record-modal .modal-content {
+  padding: 15px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input-group input, .input-group textarea {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+  font-size: 15px;
+}
+
+.input-group textarea {
+  min-height: 80px;
+}
+
+.picker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.picker-value {
+  color: #333;
+}
+
+.arrow-down {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-cancel {
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 20px;
+  margin-right: 10px;
+  width: 120px;
+}
+
+.btn-confirm {
+  background-color: #19be6b;
+  color: white;
+  border-radius: 20px;
+  width: 120px;
+}

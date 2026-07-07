@@ -1,0 +1,92 @@
+<!--pages/health/health.wxml-->
+<view class="health-container">
+  <view class="app-header">
+    <view class="logo-container">
+      <text class="logo-emoji">❤️</text>
+      <text class="app-name">健康监测助手</text>
+    </view>
+  </view>
+
+  <view class="health-card">
+    <view class="card-header">
+      <text class="section-title">📊 实时健康指标</text>
+      <text class="update-time">更新于 {{updateTime}}</text>
+    </view>
+    
+    <view class="health-metrics">
+      <view class="metric-item">
+        <view class="metric-header">
+          <text class="metric-emoji">❤️</text>
+          <text class="metric-name">心率</text>
+        </view>
+        <view class="metric-value">
+          <text class="value">{{healthData.heartRate}}</text>
+          <text class="unit">bpm</text>
+        </view>
+        <view class="metric-status status-{{heartStatus}}">
+          {{getHeartStatus(healthData.heartRate)}}
+        </view>
+      </view>
+      
+      <view class="metric-item">
+        <view class="metric-header">
+          <text class="metric-emoji">💉</text>
+          <text class="metric-name">血压</text>
+        </view>
+        <view class="metric-value">
+          <text class="value">{{healthData.bloodPressure}}</text>
+          <text class="unit">mmHg</text>
+        </view>
+        <view class="metric-status status-{{bloodStatus}}">
+          {{getBloodStatus(healthData.bloodPressure)}}
+        </view>
+      </view>
+      
+      <view class="metric-item">
+        <view class="metric-header">
+          <text class="metric-emoji">🌫️</text>
+          <text class="metric-name">血氧</text>
+        </view>
+        <view class="metric-value">
+          <text class="value">{{healthData.bloodOxygen}}</text>
+          <text class="unit">%</text>
+        </view>
+        <view class="metric-status status-{{oxygenStatus}}">
+          {{getOxygenStatus(healthData.bloodOxygen)}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="health-card chart-card">
+    <view class="card-header">
+      <text class="section-title">📈 心率监测曲线</text>
+      <text class="duration">实时 • 每分钟更新</text>
+    </view>
+    <view class="chart-container">
+      <canvas canvas-id="heartRateChart" class="chart-canvas"></canvas>
+    </view>
+  </view>
+
+  <view class="health-card">
+    <view class="card-header">
+      <text class="section-title">⚠️ 健康预警记录</text>
+    </view>
+    <view class="alert-list">
+      <block wx:for="{{alerts}}" wx:key="index">
+        <view class="alert-item {{index === alerts.length - 1 ? 'alert-item-last' : ''}}">
+          <view class="alert-icon">
+            <text class="alert-emoji">{{item.statusIcon}}</text>
+          </view>
+          <view class="alert-content">
+            <view class="alert-header">
+              <text class="alert-time">{{item.time}}</text>
+              <text class="alert-status">{{item.status}}</text>
+            </view>
+            <text class="alert-details">{{item.details}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

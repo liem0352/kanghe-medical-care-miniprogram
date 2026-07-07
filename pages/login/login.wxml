@@ -1,0 +1,41 @@
+<!--pages/login/login.wxml-->
+<view class="login-page" style="height: 100vh">
+  <view class="login-logo">
+    <image src="/images/logo.png" mode="aspectFit" class="logo-icon"></image>
+  </view>
+  <view class="login-title">康禾医养</view>
+  <view class="login-subtitle">康禾·智慧医养整合服务平台</view>
+  
+  <view class="login-buttons">
+    <button class="login-btn" bindtap="loginWithFace">
+      <image src="/images/face.png" mode="aspectFit" class="btn-icon"></image>
+      人脸识别登录
+    </button>
+    <button class="login-btn" bindtap="loginWithFingerprint">
+      <image src="/images/fingerprint.png" mode="aspectFit" class="btn-icon"></image>
+      指纹识别登录
+    </button>
+    <button class="login-btn" bindtap="loginWithFamily">
+      <image src="/images/family.png" mode="aspectFit" class="btn-icon"></image>
+      家属账号登录
+    </button>
+    
+    <view class="unsupported-tip" wx:if="{{showUnsupportedModal}}">
+      当前设备不支持生物识别，请使用家属账号登录
+    </view>
+  </view>
+  
+  <!-- 设备不支持模态框 -->
+  <modal class="unsupported-modal" hidden="{{!showUnsupportedModal}}" bindcancel="closeUnsupportedModal">
+    <view slot="content">
+      <view class="modal-body">
+        <image src="/images/warning.png" mode="aspectFit" class="warning-icon"></image>
+        <text class="modal-text">当前设备不支持生物识别</text>
+        <text class="modal-hint">您的设备未开启或未录入生物识别信息，请使用其他登录方式</text>
+      </view>
+    </view>
+    <view slot="footer">
+      <button class="btn-confirm" bindtap="closeUnsupportedModal">知道了</button>
+    </view>
+  </modal>
+</view>

@@ -1,0 +1,149 @@
+<!--pages/profile/profile.wxml-->
+<view class="profile-page">
+  <!-- 用户信息卡片 -->
+  <view class="user-card">
+    <view class="user-header">
+      <image src="{{user.avatar}}" class="user-avatar"></image>
+      <view class="user-info">
+        <text class="user-name">{{user.name}} ({{user.age}}岁)</text>
+        <text class="user-membership">{{user.membership}}</text>
+        <view class="health-score">
+          <text class="score-value">{{user.healthScore}}</text>
+          <text class="score-label">健康指数</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class="stats-grid">
+      <view class="stat-item">
+        <text class="stat-value">{{user.serviceCount}}</text>
+        <text class="stat-label">服务次数</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{user.points}}</text>
+        <text class="stat-label">服务积分</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{user.unreadMessages}}</text>
+        <text class="stat-label">未读消息</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="menu-section">
+    <view class="section-title">账户设置</view>
+    
+    <view class="menu-grid">
+      <view class="menu-item" bindtap="toggleSubMenu" data-menu="family">
+        <view class="menu-icon">👨‍👩‍👧</view>
+        <text class="menu-text">家庭账号</text>
+      </view>
+      
+      <view class="menu-item" bindtap="toggleSubMenu" data-menu="privacy">
+        <view class="menu-icon">🔒</view>
+        <text class="menu-text">隐私设置</text>
+      </view>
+      
+      <view class="menu-item" bindtap="toggleSubMenu" data-menu="message">
+        <view class="menu-icon">📨</view>
+        <text class="menu-text">消息中心</text>
+        <view wx:if="{{user.unreadMessages > 0}}" class="badge">{{user.unreadMessages}}</view>
+      </view>
+      
+      <view class="menu-item" bindtap="toggleSubMenu" data-menu="device">
+        <view class="menu-icon">📱</view>
+        <text class="menu-text">设备管理</text>
+      </view>
+    </view>
+    
+    <!-- 二级菜单 -->
+    <view wx:if="{{currentSubMenu === 'family'}}" class="sub-menu">
+      <navigator url="/pages/family/members" class="sub-item">👪 家庭成员</navigator>
+      <navigator url="/pages/family/roles" class="sub-item">👑 角色管理</navigator>
+      <navigator url="/pages/family/permissions" class="sub-item">🔐 权限设置</navigator>
+    </view>
+    
+    <view wx:if="{{currentSubMenu === 'privacy'}}" class="sub-menu">
+      <navigator url="/pages/privacy/profile" class="sub-item">👤 个人资料可见性</navigator>
+      <navigator url="/pages/privacy/health" class="sub-item">💊 健康数据权限</navigator>
+      <navigator url="/pages/privacy/location" class="sub-item">📍 位置共享设置</navigator>
+    </view>
+    
+    <view wx:if="{{currentSubMenu === 'message'}}" class="sub-menu">
+      <navigator url="/pages/message/system" class="sub-item">📢 系统通知</navigator>
+      <navigator url="/pages/message/health" class="sub-item">❤️ 健康提醒</navigator>
+      <navigator url="/pages/message/activity" class="sub-item">🎉 活动消息</navigator>
+    </view>
+    
+    <view wx:if="{{currentSubMenu === 'device'}}" class="sub-menu">
+      <navigator url="/pages/device/list" class="sub-item">📊 我的设备</navigator>
+      <navigator url="/pages/device/bind" class="sub-item">➕ 绑定新设备</navigator>
+      <navigator url="/pages/device/settings" class="sub-item">⚙️ 设备设置</navigator>
+    </view>
+  </view>
+  
+  <!-- 系统设置 -->
+  <view class="menu-section">
+    <view class="section-title">系统设置</view>
+    
+    <view class="menu-grid">
+      <view class="menu-item" bindtap="showFontSettings">
+        <view class="menu-icon">🔠</view>
+        <text class="menu-text">字体大小</text>
+      </view>
+      
+      <view class="menu-item" bindtap="toggleSubMenu" data-menu="settings">
+        <view class="menu-icon">⚙️</view>
+        <text class="menu-text">系统设置</text>
+      </view>
+      
+      <view class="menu-item" bindtap="toggleSubMenu" data-menu="support">
+        <view class="menu-icon">❓</view>
+        <text class="menu-text">帮助与客服</text>
+      </view>
+      
+      <view class="menu-item" bindtap="logout">
+        <view class="menu-icon">🚪</view>
+        <text class="menu-text">退出登录</text>
+      </view>
+    </view>
+    
+    <!-- 二级菜单 -->
+    <view wx:if="{{currentSubMenu === 'settings'}}" class="sub-menu">
+      <navigator url="/pages/settings/account" class="sub-item">👤 账户设置</navigator>
+      <navigator url="/pages/settings/notification" class="sub-item">🔔 通知设置</navigator>
+      <navigator url="/pages/settings/language" class="sub-item">🌐 语言设置</navigator>
+    </view>
+    
+    <view wx:if="{{currentSubMenu === 'support'}}" class="sub-menu">
+      <navigator url="/pages/support/faq" class="sub-item">📖 常见问题</navigator>
+      <navigator url="/pages/support/feedback" class="sub-item">💬 意见反馈</navigator>
+      <navigator url="/pages/support/contact" class="sub-item">☎️ 联系客服</navigator>
+    </view>
+  </view>
+  
+  <!-- 字体设置模态框 -->
+  <modal class="font-modal" hidden="{{!showFontModal}}">
+    <view slot="title">字体大小设置</view>
+    <view slot="content">
+      <view class="modal-content">
+        <radio-group bindchange="fontSizeChange">
+          <label class="font-option" wx:for="{{fontSizes}}" wx:key="size">
+            <radio value="{{item.size}}" checked="{{currentFontSize === item.size}}"/>
+            <text class="font-label {{currentFontSize === item.size ? 'active' : ''}}">
+              {{item.label}}
+            </text>
+            <view class="font-preview {{item.size}}">
+              示例文本：康禾医养让健康管理更简单
+            </view>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view slot="footer">
+      <button class="btn-cancel" bindtap="closeFontModal">取消</button>
+      <button class="btn-confirm" bindtap="confirmFontSize">确认</button>
+    </view>
+  </modal>
+</view>

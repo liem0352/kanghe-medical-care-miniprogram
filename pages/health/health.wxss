@@ -1,0 +1,192 @@
+/* pages/health/health.wxss */
+.health-container {
+  padding: 16rpx 24rpx 40rpx;
+  background: linear-gradient(to bottom, #f7f9ff, #eef5ff);
+  min-height: 100vh;
+}
+
+.app-header {
+  padding: 24rpx 0 32rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 24rpx;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-emoji {
+  font-size: 48rpx;
+  margin-right: 16rpx;
+}
+
+.app-name {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #1a2b50;
+}
+
+.health-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 30rpx rgba(25, 80, 220, 0.08);
+  padding: 32rpx;
+  margin-bottom: 32rpx;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1a2b50;
+}
+
+.update-time, .duration {
+  font-size: 24rpx;
+  color: #7e8aa6;
+}
+
+.health-metrics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metric-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 12rpx;
+}
+
+.metric-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.metric-emoji {
+  font-size: 44rpx;
+  margin-bottom: 8rpx;
+}
+
+.metric-name {
+  font-size: 26rpx;
+  color: #5d6a8d;
+}
+
+.metric-value {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 16rpx;
+}
+
+.value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #1a2b50;
+}
+
+.unit {
+  font-size: 28rpx;
+  color: #7e8aa6;
+  margin-left: 8rpx;
+}
+
+.metric-status {
+  font-size: 26rpx;
+  padding: 4rpx 16rpx;
+  border-radius: 16rpx;
+  display: inline-block;
+}
+
+.status-good {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+}
+
+.status-warning {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+}
+
+.status-danger {
+  background: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+}
+
+.chart-card {
+  padding-bottom: 24rpx;
+}
+
+.chart-container {
+  height: 300rpx;
+}
+
+.chart-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.alert-list {
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.alert-item {
+  display: flex;
+  padding: 24rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
+  background: #f9faff;
+  border-radius: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.alert-item-last {
+  margin-bottom: 0;
+}
+
+.alert-icon {
+  width: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-emoji {
+  font-size: 44rpx;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.alert-time {
+  font-size: 26rpx;
+  color: #7e8aa6;
+}
+
+.alert-status {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.alert-details {
+  font-size: 28rpx;
+  color: #5d6a8d;
+  line-height: 1.4;
+}

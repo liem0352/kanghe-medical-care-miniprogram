@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/service/service",
+    "pages/health/health",
+    "pages/family/family",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "康禾·智慧医养整合服务平台",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#19be6b",
+    "backgroundColor": "#f5f7fa",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#19be6b",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tab-icons/tab-home.png",
+        "selectedIconPath": "/images/tab-icons/tab-home-active.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "服务",
+        "iconPath": "/images/tab-icons/tab-service.png",
+        "selectedIconPath": "/images/tab-icons/tab-service-active.png"
+      },
+      {
+        "pagePath": "pages/health/health",
+        "text": "健康",
+        "iconPath": "/images/tab-icons/tab-health.png",
+        "selectedIconPath": "/images/tab-icons/tab-health-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/images/tab-icons/tab-profile.png",
+        "selectedIconPath": "/images/tab-icons/tab-profile-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "modal": "/components/modal/modal"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

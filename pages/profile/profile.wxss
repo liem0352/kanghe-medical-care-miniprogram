@@ -1,0 +1,239 @@
+/* pages/profile/profile.wxss */
+.profile-page {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* 用户卡片 */
+.user-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.user-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 3px solid #f1f9f4;
+  margin-right: 20px;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.user-membership {
+  font-size: 24rpx;
+  color: #19be6b;
+  background: #f1f9f4;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+  display: inline-block;
+}
+
+.health-score {
+  margin-top: 15rpx;
+  display: flex;
+  align-items: center;
+}
+
+.score-value {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #19be6b;
+  margin-right: 10rpx;
+}
+
+.score-label {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 统计网格 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rpx;
+}
+
+.stat-item {
+  background: #f8f9fa;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #19be6b;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 菜单区域 */
+.menu-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30rpx;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30rpx;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rpx;
+}
+
+.menu-item {
+  text-align: center;
+  padding: 20rpx 0;
+  border-radius: 12rpx;
+  transition: all 0.3s;
+}
+
+.menu-item:active {
+  background: #f1f9f4;
+  transform: scale(0.95);
+}
+
+.menu-icon {
+  font-size: 50rpx;
+  margin-bottom: 15rpx;
+}
+
+.menu-text {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  background: #ff6b6b;
+  color: white;
+  font-size: 20rpx;
+  min-width: 30rpx;
+  height: 30rpx;
+  border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8rpx;
+}
+
+/* 二级菜单 */
+.sub-menu {
+  margin-top: 30rpx;
+  background: #f8f9fa;
+  border-radius: 16rpx;
+  padding: 20rpx;
+}
+
+.sub-item {
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 1rpx solid #eee;
+}
+
+.sub-item:last-child {
+  border-bottom: none;
+}
+
+/* 模态框样式 */
+.font-modal .modal-content {
+  padding: 30rpx;
+}
+
+.font-option {
+  display: block;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.font-label {
+  display: inline-block;
+  width: 150rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.font-label.active {
+  color: #19be6b;
+  font-weight: bold;
+}
+
+.font-preview {
+  color: #666;
+  padding: 20rpx;
+  border-radius: 16rpx;
+  background: #f9f9f9;
+  margin-top: 20rpx;
+  margin-left: 70rpx;
+}
+
+.font-preview.normal {
+  font-size: 28rpx;
+}
+
+.font-preview.large {
+  font-size: 32rpx;
+}
+
+.font-preview.xlarge {
+  font-size: 36rpx;
+}
+
+.font-preview.xxlarge {
+  font-size: 40rpx;
+}
+
+.btn-cancel {
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 40rpx;
+  margin-right: 20rpx;
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.btn-confirm {
+  background-color: #19be6b;
+  color: white;
+  border-radius: 40rpx;
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}

@@ -1,0 +1,18 @@
+<!-- SOS紧急按钮组件 -->
+<view class="sos-container">
+  <button 
+    class="sos-button {{alarmActive ? 'active' : ''}}"
+    hover-class="sos-button-hover"
+    bind:tap="triggerSOS"
+  >
+    <text class="sos-text">紧急求助</text>
+  </button>
+  
+  <!-- 物理按键监听 -->
+  <input 
+    type="button" 
+    class="physical-button" 
+    bindtap="triggerSOS"
+    aria-label="紧急求助物理按钮"
+  />
+</view>

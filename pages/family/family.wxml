@@ -1,0 +1,97 @@
+<!--pages/family/family.wxml-->
+<view class="family-page">
+  <view class="header">
+    <view class="header-left" bindtap="goBack">
+      <image src="/images/back.png" class="back-icon"></image>
+    </view>
+    <view class="header-title">家庭账号管理</view>
+    <view class="header-right" bindtap="addFamilyMember">
+      <text>添加</text>
+    </view>
+  </view>
+  
+  <scroll-view scroll-y="true" class="family-container">
+    <view class="family-info">
+      <image src="/images/family-bg.jpg" class="family-banner"></image>
+      <view class="family-overlay">
+        <text class="family-slogan">关爱家人健康，连接亲情纽带</text>
+      </view>
+    </view>
+    
+    <view class="section-title">家庭成员 ({{familyMembers.length}})</view>
+    <view class="family-list">
+      <block wx:for="{{familyMembers}}" wx:key="id">
+        <view class="family-member">
+          <image src="{{item.avatar}}" class="member-avatar"></image>
+          <view class="member-info">
+            <view class="member-name-wrap">
+              <text class="member-name">{{item.name}}</text>
+              <text class="member-age">{{item.age}}岁</text>
+              <text class="member-relation">({{item.relation}})</text>
+            </view>
+            <text class="member-status">{{item.status}}</text>
+          </view>
+          <view class="member-actions">
+            <button class="call-btn" bindtap="callMember" data-phone="{{item.phone}}">
+              <image src="/images/call.png" class="action-icon"></image>
+            </button>
+            <button class="message-btn" bindtap="messageMember" data-phone="{{item.phone}}">
+              <image src="/images/message.png" class="action-icon"></image>
+            </button>
+          </view>
+        </view>
+      </block>
+    </view>
+    
+    <view class="section-title">健康动态</view>
+    <view class="health-dynamics">
+      <view class="health-event">
+        <image src="/images/heart-icon.png" class="event-icon"></image>
+        <view class="event-content">
+          <text class="event-title">妈妈血压偏高提醒</text>
+        </view>
+        <text class="event-time">今天 10:25</text>
+      </view>
+      
+      <view class="health-event">
+        <image src="/images/medicine-icon.png" class="event-icon"></image>
+        <view class="event-content">
+          <text class="event-title">爸爸完成了今日用药</text>
+        </view>
+        <text class="event-time">昨天 18:30</text>
+      </view>
+    </view>
+  </scroll-view>
+  
+  <!-- 添加家庭成员模态框 -->
+  <modal class="add-member-modal" hidden="{{!showAddMemberModal}}" bindcancel="closeAddMemberModal">
+    <view slot="title">添加家庭成员</view>
+    <view slot="content">
+      <view class="modal-content">
+        <view class="input-group">
+          <text class="input-label">姓名</text>
+          <input type="text" placeholder="输入姓名" value="{{newMember.name}}" bindinput="inputName" />
+        </view>
+        
+        <view class="input-group">
+          <text class="input-label">关系</text>
+          <picker mode="selector" range="{{relations}}" value="{{relationIndex}}" bindchange="relationChange">
+            <view class="picker">
+              <text>{{newMember.relation || '选择关系'}}</text>
+              <image src="/images/arrow-down.png" class="arrow-down"></image>
+            </view>
+          </picker>
+        </view>
+        
+        <view class="input-group">
+          <text class="input-label">电话</text>
+          <input type="number" placeholder="输入电话号码" value="{{newMember.phone}}" bindinput="inputPhone" />
+        </view>
+      </view>
+    </view>
+    <view slot="footer">
+      <button class="btn-cancel" bindtap="closeAddMemberModal">取消</button>
+      <button class="btn-confirm" bindtap="confirmAddMember">确认添加</button>
+    </view>
+  </modal>
+</view>

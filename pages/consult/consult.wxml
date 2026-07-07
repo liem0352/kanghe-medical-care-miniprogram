@@ -1,0 +1,55 @@
+<!--pages/consult/consult.wxml-->
+<view>
+  <view class="header">
+    <view class="logo-container">
+      <view class="logo">
+        <image src="/images/consult.png" mode="aspectFit" class="header-icon"></image>
+      </view>
+      <view class="app-name">在线问诊</view>
+    </view>
+  </view>
+  
+  <view class="consult-banner">
+    <button class="video-consult-btn" bindtap="startVideoConsult">
+      <image src="/images/video.png" mode="aspectFit" class="consult-icon"></image>
+      立即视频问诊
+    </button>
+  </view>
+  
+  <view class="card">
+    <view class="section-title">推荐医生</view>
+    <view class="doctor-list">
+      <block wx:for="{{doctors}}" wx:key="index">
+        <view class="doctor-item">
+          <view class="doctor-avatar">
+            <image src="{{item.avatar}}" mode="aspectFill" class="avatar-img"></image>
+          </view>
+          <view class="doctor-info">
+            <text class="doctor-name">{{item.name}} {{item.title}}</text>
+            <text class="doctor-details">{{item.department}} | {{item.experience}}</text>
+            <view class="consult-buttons">
+              <button class="consult-btn" bindtap="startTextConsult" data-id="{{item.id}}">图文咨询</button>
+              <button class="consult-btn video-btn" bindtap="startVideoConsult" data-id="{{item.id}}">视频问诊</button>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="section-title">问诊记录</view>
+    <view class="consult-history">
+      <block wx:for="{{history}}" wx:key="index">
+        <view class="history-item">
+          <view class="history-date">{{item.date}}</view>
+          <view class="history-detail">
+            <text class="doctor-name">{{item.doctor}}</text>
+            <text class="history-type">{{item.type}}咨询</text>
+          </view>
+          <view class="history-status">{{item.status}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<view>
+  <view class="header">
+    <view class="logo-container">
+      <view class="logo">
+        <image src="/images/chronic.png" mode="aspectFit" class="header-icon"></image>
+      </view>
+      <view class="app-name">慢病管理</view>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="disease-card">
+      <view class="disease-header">
+        <view class="disease-icon">
+          <image src="/images/blood-pressure.png" mode="aspectFit" class="icon-img"></image>
+        </view>
+        <view class="disease-info">
+          <text class="disease-name">高血压管理</text>
+          <text class="disease-days">已记录 120 天</text>
+        </view>
+      </view>
+      <view class="disease-content">
+        <text class="last-record">上次记录: 142/85 mmHg (2023-07-18)</text>
+        <view class="disease-chart"></view>
+        <view class="disease-stats">
+          <text>最高记录: 158/92</text>
+          <text>平均血压: 138/80</text>
+        </view>
+      </view>
+    </view>
+    
+    <view class="disease-card">
+      <view class="disease-header">
+        <view class="disease-icon" style="background: #19be6b;">
+          <image src="/images/diabetes.png" mode="aspectFit" class="icon-img"></image>
+        </view>
+        <view class="disease-info">
+          <text class="disease-name">2型糖尿病管理</text>
+          <text class="disease-days">已记录 180 天</text>
+        </view>
+      </view>
+      <view class="disease-content">
+        <text class="last-record">上次空腹血糖: 6.8 mmol/L (2023-07-18)</text>
+        <view class="disease-chart"></view>
+        <view class="disease-stats">
+          <text>最高血糖: 8.2</text>
+          <text>平均血糖: 6.3</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="section-title">用药提醒</view>
+    <view class="medicine-list">
+      <block wx:for="{{medicines}}" wx:key="index">
+        <view class="medicine-item">
+          <view class="medicine-info">
+            <text class="medicine-name">{{item.name}}</text>
+            <text class="medicine-dosage">{{item.dosage}}</text>
+          </view>
+          <text class="medicine-time">{{item.nextTime}}</text>
+        </view>
+      </block>
+    </view>
+    <button class="add-btn">添加用药提醒</button>
+  </view>
+</view>
