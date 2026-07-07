@@ -1,40 +1,52 @@
-# 
+# 康禾医养微信小程序
 
-> liem
+> 作者：liem
 
-## ## - 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
--  SOS
+## 项目简介
 
-## - 
+康禾医养微信小程序是一个原生微信小程序项目，为老年人和慢性病患者提供健康管理与医疗服务。
+
+## 功能模块
+
+- 首页：健康概览、快捷服务入口、今日提醒
+- 医疗服务：上门护理、康复理疗、心理关怀、专业陪诊
+- 健康监测：心率、血压、血氧等指标监测
+- 慢病管理：慢性病记录与管理
+- 在线咨询：图文咨询
+- 用药管理：处方查看与用药提醒
+- 家庭管理：家庭成员健康动态
+- 个人中心：用户信息管理
+- 紧急求助：一键 SOS
+
+## 技术栈
+
+- 微信小程序原生框架
 - WXML / WXSS / JavaScript
-- modaldoctor-cardhealth-cardsos-button
--  API
+- 自定义组件（modal、doctor-card、health-card、sos-button）
+- 微信小程序 API
 
-## ```
- app.js              # 
- app.json            # 
- app.wxss            # 
- components/         # 
- pages/              # 
-    index/         # 
-    service/       # 
-    health/        # 
-    family/        # 
-    profile/       # 
-    login/         # 
-    consult/       # 
-    chronic/       # 
-    prescription/  # 
- services/           # 
- utils/              # 
- images/             # 
+## 项目结构
+
+```
+├── app.js              # 小程序入口
+├── app.json            # 全局配置
+├── app.wxss            # 全局样式
+├── components/         # 自定义组件
+├── pages/              # 页面
+│   ├── index/         # 首页
+│   ├── service/       # 医疗服务
+│   ├── health/        # 健康监测
+│   ├── family/        # 家庭管理
+│   ├── profile/       # 个人中心
+│   ├── login/         # 登录
+│   ├── consult/       # 在线咨询
+│   ├── chronic/       # 慢病管理
+│   └── prescription/  # 用药管理
+├── services/           # 业务服务
+├── utils/              # 工具函数
+└── images/             # 图片资源
 ```
 
-## 
+## 使用方式
+
+在微信开发者工具中导入项目即可预览。
