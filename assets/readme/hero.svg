@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="t d">
+  <title id="t">kanghe-medical-care-miniprogram · 康禾医养微信小程序</title>
+  <desc id="d">原生微信小程序医养健康管理系统,含首页、医疗、健康监测、慢病管理、家庭、在线咨询、用药管理与紧急 SOS。左侧标题与技术栈,右侧展示心率监测卡片与 SOS 按钮。</desc>
+  <rect width="1200" height="340" rx="22" fill="#0a1820"/>
+  <rect x="0" y="0" width="6" height="340" rx="3" fill="#14b8a6"/>
+
+  <g transform="translate(56,54)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif">
+    <text x="0" y="0" font-size="15" letter-spacing="4" fill="#14b8a6" font-weight="600">WECHAT MINIPROGRAM · ELDERCARE</text>
+    <text x="0" y="52" font-size="40" font-weight="700" fill="#e3eef0">康禾医养微信小程序</text>
+    <text x="0" y="96" font-size="17" fill="#7d989c">原生小程序 · WXML + WXSS + JS</text>
+    <text x="0" y="122" font-size="17" fill="#7d989c">健康监测 · 在线咨询 · 紧急求助</text>
+
+    <g transform="translate(0,160)" font-size="13.5" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
+      <g><rect width="112" height="30" rx="8" fill="none" stroke="#13303a"/><text x="56" y="20" text-anchor="middle" fill="#9ab4b8">WXML+WXSS</text></g>
+      <g transform="translate(124,0)"><rect width="80" height="30" rx="8" fill="none" stroke="#13303a"/><text x="40" y="20" text-anchor="middle" fill="#9ab4b8">原生 JS</text></g>
+      <g transform="translate(216,0)"><rect width="116" height="30" rx="8" fill="none" stroke="#13303a"/><text x="58" y="20" text-anchor="middle" fill="#9ab4b8">自定义组件</text></g>
+      <g transform="translate(344,0)"><rect width="128" height="30" rx="8" fill="none" stroke="#13303a"/><text x="64" y="20" text-anchor="middle" fill="#9ab4b8">小程序 API</text></g>
+    </g>
+    <text x="0" y="236" font-size="13" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#4f6970">9 页面 · modal/doctor-card/health-card/sos-button · 定时任务</text>
+  </g>
+
+  <g transform="translate(712,52)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif">
+    <text x="0" y="0" font-size="12" letter-spacing="3" fill="#4f6970">HEALTH MONITOR</text>
+
+    <g transform="translate(0,18)">
+      <rect width="260" height="118" rx="12" fill="#0f2230" stroke="#13303a"/>
+      <text x="16" y="26" font-size="12" fill="#7d989c">心率监测</text>
+      <text x="16" y="62" font-size="30" font-weight="700" fill="#14b8a6" font-family="ui-monospace,monospace">72</text>
+      <text x="58" y="62" font-size="13" fill="#4f6970" font-family="ui-monospace,monospace">bpm</text>
+      <text x="232" y="26" font-size="11" fill="#14b8a6" text-anchor="end">正常</text>
+
+      <path d="M16,92 L48,92 L54,72 L60,112 L66,82 L72,92 L104,92 L110,76 L116,108 L122,92 L244,92" fill="none" stroke="#14b8a6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <g transform="translate(276,18)">
+      <rect width="144" height="118" rx="12" fill="#0f2230" stroke="#13303a"/>
+      <text x="14" y="26" font-size="12" fill="#7d989c">血压</text>
+      <text x="14" y="58" font-size="22" font-weight="700" fill="#e3eef0" font-family="ui-monospace,monospace">120/80</text>
+      <text x="14" y="76" font-size="11" fill="#4f6970" font-family="ui-monospace,monospace">mmHg</text>
+      <text x="128" y="26" font-size="11" fill="#14b8a6" text-anchor="end">正常</text>
+      <rect x="14" y="92" width="116" height="6" rx="3" fill="#13303a"/>
+      <rect x="14" y="92" width="78" height="6" rx="3" fill="#14b8a6" opacity="0.7"/>
+    </g>
+
+    <g transform="translate(0,152)">
+      <rect width="200" height="42" rx="9" fill="#0f2230" stroke="#13303a"/>
+      <circle cx="24" cy="21" r="8" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+      <path d="M21,21 L27,21 M24,18 L24,24" stroke="#14b8a6" stroke-width="1.4"/>
+      <text x="42" y="26" font-size="12.5" fill="#e3eef0">在线问诊</text>
+      <text x="186" y="26" font-size="10" fill="#4f6970" text-anchor="end" font-family="ui-monospace,monospace">consult</text>
+    </g>
+    <g transform="translate(212,152)">
+      <rect width="208" height="42" rx="9" fill="#0f2230" stroke="#13303a"/>
+      <rect x="14" y="15" width="14" height="14" rx="3" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+      <text x="40" y="26" font-size="12.5" fill="#e3eef0">用药提醒</text>
+      <text x="194" y="26" font-size="10" fill="#4f6970" text-anchor="end" font-family="ui-monospace,monospace">scheduler.js</text>
+    </g>
+
+    <g transform="translate(0,208)">
+      <rect width="420" height="56" rx="11" fill="#2a0d12" stroke="#7a1a2a"/>
+      <circle cx="32" cy="28" r="14" fill="#f43f5e" opacity="0.18"/>
+      <circle cx="32" cy="28" r="9" fill="#f43f5e"/>
+      <text x="58" y="26" font-size="14" fill="#f43f5e" font-weight="700">一键 SOS 紧急求助</text>
+      <text x="58" y="42" font-size="11" fill="#9c4a55" font-family="ui-monospace,monospace">components/sos-button · 位置上报</text>
+    </g>
+  </g>
+
+  <text x="56" y="312" font-size="12" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#4f6970">author: liem · 微信开发者工具 · tabBar: 首页/医疗/健康/我的</text>
+</svg>
