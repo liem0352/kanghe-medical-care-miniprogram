@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-labelledby="journeyTitle journeyDesc">
+  <title id="journeyTitle">用户旅程</title>
+  <desc id="journeyDesc">康禾医养微信小程序核心用户路径:授权登录到健康概览、医疗服务、在线咨询、用药管理,SOS 作为旁路随时触发。</desc>
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8B9A92"/>
+    </marker>
+    <marker id="arrowSos" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- 画布背景 -->
+  <rect x="0" y="0" width="1200" height="320" rx="24" fill="#F4F7F5"/>
+
+  <!-- 标题 -->
+  <g transform="translate(56 48)">
+    <text x="0" y="0" class="sans" font-size="30" font-weight="700" fill="#1A2E2A">用户旅程</text>
+    <text x="0" y="28" class="sans" font-size="15" fill="#5C6E66">从授权登录到用药管理的核心路径,SOS 可随时触发</text>
+  </g>
+
+  <!-- 主流程 5 个节点 -->
+  <g transform="translate(0 0)">
+    <!-- Node 1: 授权登录 -->
+    <g transform="translate(65 140)">
+      <rect x="0" y="0" width="190" height="80" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+      <text x="16" y="30" class="sans" font-size="14" font-weight="700" fill="#1A2E2A">授权登录</text>
+      <text x="16" y="52" class="mono" font-size="11" fill="#8B9A92">pages/login</text>
+      <text x="16" y="68" class="sans" font-size="11" fill="#5C6E66">手机号 + 验证码</text>
+    </g>
+    <!-- Node 2: 健康概览 -->
+    <g transform="translate(285 140)">
+      <rect x="0" y="0" width="190" height="80" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="16" y="30" class="sans" font-size="14" font-weight="700" fill="#1A2E2A">健康概览</text>
+      <text x="16" y="52" class="mono" font-size="11" fill="#8B9A92">pages/index</text>
+      <text x="16" y="68" class="sans" font-size="11" fill="#5C6E66">心率/血压/血氧</text>
+    </g>
+    <!-- Node 3: 医疗服务 -->
+    <g transform="translate(505 140)">
+      <rect x="0" y="0" width="190" height="80" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="16" y="30" class="sans" font-size="14" font-weight="700" fill="#1A2E2A">医疗服务</text>
+      <text x="16" y="52" class="mono" font-size="11" fill="#8B9A92">pages/service</text>
+      <text x="16" y="68" class="sans" font-size="11" fill="#5C6E66">上门护理/陪诊</text>
+    </g>
+    <!-- Node 4: 在线咨询 -->
+    <g transform="translate(725 140)">
+      <rect x="0" y="0" width="190" height="80" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="16" y="30" class="sans" font-size="14" font-weight="700" fill="#1A2E2A">在线咨询</text>
+      <text x="16" y="52" class="mono" font-size="11" fill="#8B9A92">pages/consult</text>
+      <text x="16" y="68" class="sans" font-size="11" fill="#5C6E66">图文咨询医生</text>
+    </g>
+    <!-- Node 5: 用药管理 -->
+    <g transform="translate(945 140)">
+      <rect x="0" y="0" width="190" height="80" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="16" y="30" class="sans" font-size="14" font-weight="700" fill="#1A2E2A">用药管理</text>
+      <text x="16" y="52" class="mono" font-size="11" fill="#8B9A92">pages/prescription</text>
+      <text x="16" y="68" class="sans" font-size="11" fill="#5C6E66">处方/用药提醒</text>
+    </g>
+
+    <!-- 主流程箭头 -->
+    <line x1="255" y1="180" x2="283" y2="180" stroke="#8B9A92" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <line x1="475" y1="180" x2="503" y2="180" stroke="#8B9A92" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <line x1="695" y1="180" x2="723" y2="180" stroke="#8B9A92" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <line x1="915" y1="180" x2="943" y2="180" stroke="#8B9A92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- SOS 旁路分支(赤陶虚线) -->
+  <line x1="600" y1="220" x2="600" y2="258" stroke="#D97757" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#arrowSos)"/>
+  <g transform="translate(540 258)">
+    <rect x="0" y="0" width="120" height="44" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+    <circle cx="20" cy="22" r="9" fill="none" stroke="#D97757" stroke-width="1.5"/>
+    <text x="20" y="26" text-anchor="middle" class="mono" font-size="8" font-weight="700" fill="#D97757">SOS</text>
+    <text x="38" y="26" class="sans" font-size="12" font-weight="700" fill="#1A2E2A">紧急求助</text>
+  </g>
+  <text x="672" y="284" class="sans" font-size="11" fill="#8B9A92">旁路:主流程任意位置可触发</text>
+</svg>

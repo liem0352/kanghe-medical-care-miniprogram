@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="100%" role="img" aria-labelledby="techTitle techDesc">
+  <title id="techTitle">技术栈</title>
+  <desc id="techDesc">康禾医养微信小程序技术栈:原生小程序框架,WXML/WXSS/JS,组件/服务/工具三层工程,无跨端框架。</desc>
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- 画布背景 -->
+  <rect x="0" y="0" width="1200" height="240" rx="24" fill="#F4F7F5"/>
+
+  <!-- 标题 -->
+  <g transform="translate(56 44)">
+    <text x="0" y="0" class="sans" font-size="30" font-weight="700" fill="#1A2E2A">技术栈</text>
+    <text x="0" y="26" class="sans" font-size="14" fill="#5C6E66">原生小程序工程,无跨端中间层</text>
+  </g>
+
+  <!-- 4 列技术分层 -->
+  <!-- Col 1: 运行框架 -->
+  <g transform="translate(56 100)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#2E7D6B" letter-spacing="1.2">运行框架</text>
+    <rect x="0" y="10" width="260" height="110" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+    <text x="16" y="40" class="sans" font-size="16" font-weight="700" fill="#1A2E2A">微信小程序原生</text>
+    <text x="16" y="62" class="mono" font-size="11" fill="#8B9A92">app.json / app.js / app.wxss</text>
+    <text x="16" y="84" class="sans" font-size="12" fill="#5C6E66">直接使用微信运行时,</text>
+    <text x="16" y="102" class="sans" font-size="12" fill="#5C6E66">无 uni-app / Taro 中间层</text>
+  </g>
+
+  <!-- Col 2: 页面语言 -->
+  <g transform="translate(332 100)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#2E7D6B" letter-spacing="1.2">页面语言</text>
+    <rect x="0" y="10" width="260" height="110" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+    <text x="16" y="40" class="mono" font-size="16" font-weight="700" fill="#1A2E2A">WXML + WXSS + JS</text>
+    <text x="16" y="62" class="mono" font-size="11" fill="#8B9A92">.wxml / .wxss / .js / .json</text>
+    <text x="16" y="84" class="sans" font-size="12" fill="#5C6E66">每页四件套结构,</text>
+    <text x="16" y="102" class="sans" font-size="12" fill="#5C6E66">9 个页面真实落地</text>
+  </g>
+
+  <!-- Col 3: 工程分层 -->
+  <g transform="translate(608 100)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#2E7D6B" letter-spacing="1.2">工程分层</text>
+    <rect x="0" y="10" width="260" height="110" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+    <text x="16" y="40" class="sans" font-size="16" font-weight="700" fill="#1A2E2A">组件 / 服务 / 工具</text>
+    <text x="16" y="62" class="mono" font-size="11" fill="#8B9A92">components / services / utils</text>
+    <text x="16" y="84" class="sans" font-size="12" fill="#5C6E66">业务逻辑抽离 services,</text>
+    <text x="16" y="102" class="sans" font-size="12" fill="#5C6E66">页面只负责渲染与事件</text>
+  </g>
+
+  <!-- Col 4: 架构约束 -->
+  <g transform="translate(884 100)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#D97757" letter-spacing="1.2">架构约束</text>
+    <rect x="0" y="10" width="260" height="110" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+    <text x="16" y="40" class="sans" font-size="16" font-weight="700" fill="#1A2E2A">无跨端框架</text>
+    <text x="16" y="62" class="mono" font-size="11" fill="#8B9A92">no uni-app / no Taro</text>
+    <text x="16" y="84" class="sans" font-size="12" fill="#5C6E66">运行时与微信能力</text>
+    <text x="16" y="102" class="sans" font-size="12" fill="#5C6E66">贴合更紧</text>
+  </g>
+</svg>

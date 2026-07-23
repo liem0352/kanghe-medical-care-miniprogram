@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" width="100%" role="img" aria-labelledby="footerTitle footerDesc">
+  <title id="footerTitle">README 签名</title>
+  <desc id="footerDesc">康禾医养微信小程序 README 页脚签名:beautify-github-readme skill 制作,MIT License,作者 liem。</desc>
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- 画布背景 -->
+  <rect x="0" y="0" width="1200" height="100" rx="12" fill="#F4F7F5"/>
+
+  <!-- 顶部细分隔线 -->
+  <line x1="56" y1="20" x2="1144" y2="20" stroke="#E3EAE6" stroke-width="1"/>
+
+  <!-- 居中签名块 -->
+  <g text-anchor="middle">
+    <text x="600" y="44" class="mono" font-size="11" fill="#8B9A92" letter-spacing="1.6">README MADE WITH</text>
+    <text x="600" y="68" class="sans" font-size="18" font-weight="700" fill="#2E7D6B">beautify-github-readme</text>
+    <text x="600" y="88" class="mono" font-size="11" fill="#8B9A92">MIT License,作者 liem</text>
+  </g>
+</svg>

@@ -1,118 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" role="img" aria-labelledby="heroTitle heroDesc">
-  <title id="heroTitle">康禾医养微信小程序 - README Hero</title>
-  <desc id="heroDesc">康禾医养微信小程序 README hero:左侧标题与元数据,右侧小程序手机框含三张堆叠页面卡与底部四格 tabBar。</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">康禾医养微信小程序 README Hero</title>
+  <desc id="heroDesc">康禾医养微信小程序 README hero:左侧标题与项目元数据,右侧小程序手机框含三张堆叠页面卡与底部四格 tabBar。</desc>
   <defs>
     <style>
-      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "PingFang SC", "Microsoft YaHei", sans-serif; }
       .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
     </style>
   </defs>
 
-  <!-- 画布背景 -->
-  <rect x="0" y="0" width="1200" height="380" rx="26" fill="#F4F7F5"/>
+  <!-- 画布背景:淡松绿白 -->
+  <rect x="0" y="0" width="1200" height="360" rx="24" fill="#F4F7F5"/>
 
-  <!-- 极淡 8 倍栅格点(装饰,不抢戏) -->
-  <g fill="#2E7D6B" opacity="0.06">
-    <circle cx="56"  cy="56"  r="1.2"/>
-    <circle cx="120" cy="56"  r="1.2"/>
-    <circle cx="56"  cy="120" r="1.2"/>
-    <circle cx="120" cy="120" r="1.2"/>
-  </g>
-
-  <!-- ============ 左侧标题块 ============ -->
-  <g transform="translate(56 40)">
-    <!-- 顶部小标签 -->
-    <rect x="0" y="0" width="232" height="28" rx="8" fill="none" stroke="#2E7D6B" stroke-width="1"/>
-    <text x="14" y="19" class="mono" font-size="14" fill="#2E7D6B" letter-spacing="1.4">WEAPP · MINIPROGRAM</text>
+  <!-- 左侧标题块 -->
+  <g transform="translate(56 48)">
+    <!-- 单一品牌条 eyebrow -->
+    <rect x="0" y="0" width="208" height="28" rx="8" fill="none" stroke="#2E7D6B" stroke-width="1"/>
+    <text x="14" y="19" class="mono" font-size="13" fill="#2E7D6B" letter-spacing="1.6">WEAPP / MINIPROGRAM</text>
 
     <!-- 大标题 -->
     <text x="0" y="100" class="sans" font-size="44" font-weight="700" fill="#1A2E2A">康禾医养微信小程序</text>
 
     <!-- 副标题 -->
-    <text x="0" y="138" class="sans" font-size="18" fill="#8B9A92">原生小程序 · 9 模块 · 5 自定义组件</text>
+    <text x="0" y="138" class="sans" font-size="18" fill="#5C6E66">面向长辈与慢病患者的原生小程序</text>
 
-    <!-- 元数据 -->
-    <text x="0" y="180" class="mono" font-size="14" fill="#8B9A92" letter-spacing="0.4">WXML + WXSS + JS · SOS · tabBar</text>
+    <!-- 元数据:每行最多 1 个中点 -->
+    <text x="0" y="180" class="mono" font-size="14" fill="#8B9A92" letter-spacing="0.4">9 页面模块 + 5 自定义组件</text>
+    <text x="0" y="202" class="mono" font-size="14" fill="#8B9A92" letter-spacing="0.4">WXML + WXSS + JS,无跨端框架</text>
 
     <!-- 底部签名 -->
-    <text x="0" y="290" class="mono" font-size="12" fill="#8B9A92">作者 liem · 微信小程序原生 · MIT</text>
+    <text x="0" y="270" class="mono" font-size="12" fill="#8B9A92">作者 liem,MIT License</text>
   </g>
 
-  <!-- ============ 右侧小程序手机框 ============ -->
+  <!-- 右侧小程序手机框(项目原生 motif) -->
   <g transform="translate(760 40)">
-    <!-- 手机外框 -->
-    <rect x="0" y="0" width="384" height="300" rx="24" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
-
-    <!-- 顶部状态栏 -->
+    <rect x="0" y="0" width="384" height="280" rx="24" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
     <text x="20" y="26" class="mono" font-size="12" fill="#1A2E2A" font-weight="600">康禾医养</text>
-    <circle cx="356" cy="22" r="3" fill="#2E7D6B"/>
-    <circle cx="346" cy="22" r="3" fill="#2E7D6B" opacity="0.5"/>
-    <circle cx="336" cy="22" r="3" fill="#2E7D6B" opacity="0.25"/>
     <line x1="16" y1="36" x2="368" y2="36" stroke="#E3EAE6" stroke-width="1"/>
 
-    <!-- 内容区:3 张堆叠页面卡(微旋转模拟栈) -->
-
     <!-- 卡1:首页 · 健康概览 -->
-    <g transform="translate(32 48) rotate(-1.6 160 30)">
-      <rect x="0" y="0" width="320" height="60" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
-      <text x="16" y="26" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">首页 · 健康概览</text>
-      <text x="16" y="46" class="mono" font-size="11" fill="#8B9A92">pages/index</text>
-      <!-- 心率/血压/血氧 三个圆点 -->
-      <circle cx="276" cy="30" r="4" fill="#D97757"/>
-      <circle cx="292" cy="30" r="4" fill="#2E7D6B"/>
-      <circle cx="308" cy="30" r="4" fill="#2E7D6B" opacity="0.4"/>
+    <g transform="translate(32 50) rotate(-1.6 160 28)">
+      <rect x="0" y="0" width="320" height="56" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="16" y="24" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">首页 · 健康概览</text>
+      <text x="16" y="42" class="mono" font-size="11" fill="#8B9A92">pages/index</text>
+      <circle cx="280" cy="28" r="4" fill="#D97757"/>
+      <circle cx="296" cy="28" r="4" fill="#2E7D6B"/>
+      <circle cx="312" cy="28" r="4" fill="#2E7D6B" opacity="0.4"/>
     </g>
 
     <!-- 卡2:医疗服务 · 上门护理 -->
-    <g transform="translate(32 116) rotate(1.2 160 30)">
-      <rect x="0" y="0" width="320" height="60" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
-      <text x="16" y="26" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">医疗服务 · 上门护理</text>
-      <text x="16" y="46" class="mono" font-size="11" fill="#8B9A92">pages/service</text>
-      <!-- 4 项服务小方块 -->
-      <rect x="252" y="22" width="14" height="14" rx="2" fill="none" stroke="#2E7D6B"/>
-      <rect x="272" y="22" width="14" height="14" rx="2" fill="none" stroke="#2E7D6B"/>
-      <rect x="292" y="22" width="14" height="14" rx="2" fill="#2E7D6B" opacity="0.15"/>
-      <rect x="312" y="22" width="14" height="14" rx="2" fill="none" stroke="#2E7D6B"/>
+    <g transform="translate(32 114) rotate(1.2 160 28)">
+      <rect x="0" y="0" width="320" height="56" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="16" y="24" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">医疗服务 · 上门护理</text>
+      <text x="16" y="42" class="mono" font-size="11" fill="#8B9A92">pages/service</text>
+      <rect x="252" y="22" width="12" height="12" rx="2" fill="none" stroke="#2E7D6B"/>
+      <rect x="270" y="22" width="12" height="12" rx="2" fill="none" stroke="#2E7D6B"/>
+      <rect x="288" y="22" width="12" height="12" rx="2" fill="#2E7D6B" opacity="0.15"/>
+      <rect x="306" y="22" width="12" height="12" rx="2" fill="none" stroke="#2E7D6B"/>
     </g>
 
     <!-- 卡3:紧急求助 · SOS(赤陶描边强调) -->
-    <g transform="translate(32 184) rotate(-0.6 160 30)">
-      <rect x="0" y="0" width="320" height="60" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-      <text x="16" y="26" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">紧急求助 · SOS</text>
-      <text x="16" y="46" class="mono" font-size="11" fill="#8B9A92">components/sos-button</text>
-      <!-- SOS 圆形按钮 -->
-      <circle cx="296" cy="30" r="11" fill="none" stroke="#D97757" stroke-width="1.5"/>
-      <text x="296" y="34" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#D97757">SOS</text>
+    <g transform="translate(32 178) rotate(-0.6 160 28)">
+      <rect x="0" y="0" width="320" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+      <text x="16" y="24" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">紧急求助 · SOS</text>
+      <text x="16" y="42" class="mono" font-size="11" fill="#8B9A92">components/sos-button</text>
+      <circle cx="296" cy="28" r="11" fill="none" stroke="#D97757" stroke-width="1.5"/>
+      <text x="296" y="32" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#D97757">SOS</text>
     </g>
 
-    <!-- 底部 tabBar -->
-    <g transform="translate(0 256)">
+    <!-- 底部 tabBar:首页/医疗/健康/我的 -->
+    <g transform="translate(0 248)">
       <line x1="16" y1="0" x2="368" y2="0" stroke="#E3EAE6" stroke-width="1"/>
-
-      <!-- 首页(高亮) -->
       <g transform="translate(8 6)">
-        <rect x="0" y="0" width="80" height="34" rx="6" fill="#2E7D6B" opacity="0.12"/>
-        <rect x="32" y="4" width="16" height="16" rx="3" fill="#2E7D6B"/>
-        <text x="40" y="30" text-anchor="middle" class="mono" font-size="10" fill="#2E7D6B" font-weight="700">首页</text>
+        <rect x="0" y="0" width="80" height="26" rx="6" fill="#2E7D6B" opacity="0.12"/>
+        <rect x="32" y="3" width="16" height="16" rx="3" fill="#2E7D6B"/>
+        <text x="40" y="26" text-anchor="middle" class="mono" font-size="10" fill="#2E7D6B" font-weight="700">首页</text>
       </g>
-
-      <!-- 医疗 -->
       <g transform="translate(104 6)">
-        <rect x="32" y="4" width="16" height="16" rx="3" fill="none" stroke="#8B9A92"/>
-        <text x="40" y="30" text-anchor="middle" class="mono" font-size="10" fill="#8B9A92">医疗</text>
+        <rect x="32" y="3" width="16" height="16" rx="3" fill="none" stroke="#8B9A92"/>
+        <text x="40" y="26" text-anchor="middle" class="mono" font-size="10" fill="#8B9A92">医疗</text>
       </g>
-
-      <!-- 健康 -->
       <g transform="translate(200 6)">
-        <rect x="32" y="4" width="16" height="16" rx="3" fill="none" stroke="#8B9A92"/>
-        <text x="40" y="30" text-anchor="middle" class="mono" font-size="10" fill="#8B9A92">健康</text>
+        <rect x="32" y="3" width="16" height="16" rx="3" fill="none" stroke="#8B9A92"/>
+        <text x="40" y="26" text-anchor="middle" class="mono" font-size="10" fill="#8B9A92">健康</text>
       </g>
-
-      <!-- 我的 -->
       <g transform="translate(296 6)">
-        <rect x="32" y="4" width="16" height="16" rx="3" fill="none" stroke="#8B9A92"/>
-        <text x="40" y="30" text-anchor="middle" class="mono" font-size="10" fill="#8B9A92">我的</text>
+        <rect x="32" y="3" width="16" height="16" rx="3" fill="none" stroke="#8B9A92"/>
+        <text x="40" y="26" text-anchor="middle" class="mono" font-size="10" fill="#8B9A92">我的</text>
       </g>
     </g>
   </g>

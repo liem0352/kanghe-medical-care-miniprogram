@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" role="img" aria-labelledby="pageArchTitle pageArchDesc">
+  <title id="pageArchTitle">页面架构图</title>
+  <desc id="pageArchDesc">康禾医养微信小程序页面架构:4 个 tabBar 入口页面,5 个二级页面,auth 组件统一鉴权拦截。</desc>
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- 画布背景 -->
+  <rect x="0" y="0" width="1200" height="360" rx="24" fill="#F4F7F5"/>
+
+  <!-- 标题 -->
+  <g transform="translate(56 48)">
+    <text x="0" y="0" class="sans" font-size="30" font-weight="700" fill="#1A2E2A">页面架构</text>
+    <text x="0" y="28" class="sans" font-size="15" fill="#5C6E66">4 个 tabBar 入口 + 5 个二级页面,auth 组件统一鉴权</text>
+  </g>
+
+  <!-- Layer 1: TABBAR 入口 -->
+  <text x="56" y="112" class="mono" font-size="12" fill="#2E7D6B" letter-spacing="1.2">TABBAR 入口</text>
+  <line x1="56" y1="120" x2="1144" y2="120" stroke="#E3EAE6" stroke-width="1"/>
+  <g transform="translate(56 132)">
+    <g transform="translate(0 0)">
+      <rect x="0" y="0" width="252" height="56" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <rect x="14" y="14" width="14" height="14" rx="3" fill="#2E7D6B"/>
+      <text x="36" y="26" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">首页</text>
+      <text x="14" y="46" class="mono" font-size="11" fill="#8B9A92">pages/index</text>
+    </g>
+    <g transform="translate(278 0)">
+      <rect x="0" y="0" width="252" height="56" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <rect x="14" y="14" width="14" height="14" rx="3" fill="#2E7D6B"/>
+      <text x="36" y="26" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">医疗服务</text>
+      <text x="14" y="46" class="mono" font-size="11" fill="#8B9A92">pages/service</text>
+    </g>
+    <g transform="translate(556 0)">
+      <rect x="0" y="0" width="252" height="56" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <rect x="14" y="14" width="14" height="14" rx="3" fill="#2E7D6B"/>
+      <text x="36" y="26" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">健康</text>
+      <text x="14" y="46" class="mono" font-size="11" fill="#8B9A92">pages/health</text>
+    </g>
+    <g transform="translate(834 0)">
+      <rect x="0" y="0" width="252" height="56" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <rect x="14" y="14" width="14" height="14" rx="3" fill="#2E7D6B"/>
+      <text x="36" y="26" class="sans" font-size="14" font-weight="600" fill="#1A2E2A">我的</text>
+      <text x="14" y="46" class="mono" font-size="11" fill="#8B9A92">pages/profile</text>
+    </g>
+  </g>
+
+  <!-- Layer 2: 二级页面 -->
+  <text x="56" y="214" class="mono" font-size="12" fill="#2E7D6B" letter-spacing="1.2">二级页面</text>
+  <line x1="56" y1="222" x2="1144" y2="222" stroke="#E3EAE6" stroke-width="1"/>
+  <g transform="translate(56 234)">
+    <g transform="translate(0 0)">
+      <rect x="0" y="0" width="200" height="52" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="14" y="22" class="sans" font-size="13" font-weight="600" fill="#1A2E2A">慢病管理</text>
+      <text x="14" y="40" class="mono" font-size="10" fill="#8B9A92">pages/chronic</text>
+    </g>
+    <g transform="translate(224 0)">
+      <rect x="0" y="0" width="200" height="52" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="14" y="22" class="sans" font-size="13" font-weight="600" fill="#1A2E2A">在线咨询</text>
+      <text x="14" y="40" class="mono" font-size="10" fill="#8B9A92">pages/consult</text>
+    </g>
+    <g transform="translate(448 0)">
+      <rect x="0" y="0" width="200" height="52" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="14" y="22" class="sans" font-size="13" font-weight="600" fill="#1A2E2A">用药管理</text>
+      <text x="14" y="40" class="mono" font-size="10" fill="#8B9A92">pages/prescription</text>
+    </g>
+    <g transform="translate(672 0)">
+      <rect x="0" y="0" width="200" height="52" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="14" y="22" class="sans" font-size="13" font-weight="600" fill="#1A2E2A">家庭管理</text>
+      <text x="14" y="40" class="mono" font-size="10" fill="#8B9A92">pages/family</text>
+    </g>
+    <g transform="translate(896 0)">
+      <rect x="0" y="0" width="200" height="52" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+      <text x="14" y="22" class="sans" font-size="13" font-weight="600" fill="#1A2E2A">登录</text>
+      <text x="14" y="40" class="mono" font-size="10" fill="#8B9A92">pages/login</text>
+    </g>
+  </g>
+
+  <!-- Layer 3: AUTH 鉴权 -->
+  <text x="56" y="312" class="mono" font-size="12" fill="#D97757" letter-spacing="1.2">AUTH 鉴权</text>
+  <line x1="56" y1="320" x2="1144" y2="320" stroke="#E3EAE6" stroke-width="1"/>
+  <g transform="translate(56 328)">
+    <text x="0" y="14" class="sans" font-size="13" fill="#5C6E66">components/auth 在需登录页面外层包一层,未授权访问统一跳转 pages/login</text>
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-labelledby="compLibTitle compLibDesc">
+  <title id="compLibTitle">组件库分类</title>
+  <desc id="compLibDesc">康禾医养微信小程序 5 个自定义组件按职责分为容器、卡片、交互三类。</desc>
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- 画布背景 -->
+  <rect x="0" y="0" width="1200" height="320" rx="24" fill="#F4F7F5"/>
+
+  <!-- 标题 -->
+  <g transform="translate(56 48)">
+    <text x="0" y="0" class="sans" font-size="30" font-weight="700" fill="#1A2E2A">组件库</text>
+    <text x="0" y="28" class="sans" font-size="15" fill="#5C6E66">5 个组件按职责分为容器、卡片、交互三类</text>
+  </g>
+
+  <!-- Col 1: 容器组件 -->
+  <g transform="translate(56 120)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#2E7D6B" letter-spacing="1.2">容器组件</text>
+    <line x1="0" y1="10" x2="336" y2="10" stroke="#E3EAE6" stroke-width="1"/>
+    <g transform="translate(0 22)">
+      <rect x="0" y="0" width="336" height="72" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <rect x="16" y="16" width="24" height="24" rx="4" fill="none" stroke="#2E7D6B"/>
+      <text x="52" y="30" class="mono" font-size="14" font-weight="700" fill="#1A2E2A">modal</text>
+      <text x="52" y="50" class="sans" font-size="12" fill="#8B9A92">通用弹窗容器,确认/取消交互</text>
+      <text x="16" y="64" class="mono" font-size="10" fill="#8B9A92">components/modal</text>
+    </g>
+  </g>
+
+  <!-- Col 2: 卡片组件 -->
+  <g transform="translate(432 120)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#2E7D6B" letter-spacing="1.2">卡片组件</text>
+    <line x1="0" y1="10" x2="336" y2="10" stroke="#E3EAE6" stroke-width="1"/>
+    <g transform="translate(0 22)">
+      <rect x="0" y="0" width="336" height="72" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <circle cx="28" cy="28" r="10" fill="none" stroke="#2E7D6B"/>
+      <text x="52" y="30" class="mono" font-size="14" font-weight="700" fill="#1A2E2A">doctor-card</text>
+      <text x="52" y="50" class="sans" font-size="12" fill="#8B9A92">医生信息卡,服务与咨询复用</text>
+      <text x="16" y="64" class="mono" font-size="10" fill="#8B9A92">components/doctor-card</text>
+    </g>
+    <g transform="translate(0 104)">
+      <rect x="0" y="0" width="336" height="72" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <rect x="16" y="16" width="24" height="24" rx="4" fill="#2E7D6B" opacity="0.15"/>
+      <line x1="20" y1="28" x2="36" y2="28" stroke="#2E7D6B" stroke-width="1"/>
+      <text x="52" y="30" class="mono" font-size="14" font-weight="700" fill="#1A2E2A">health-card</text>
+      <text x="52" y="50" class="sans" font-size="12" fill="#8B9A92">心率/血压/血氧指标卡</text>
+      <text x="16" y="64" class="mono" font-size="10" fill="#8B9A92">components/health-card</text>
+    </g>
+  </g>
+
+  <!-- Col 3: 交互组件 -->
+  <g transform="translate(808 120)">
+    <text x="0" y="0" class="mono" font-size="12" fill="#2E7D6B" letter-spacing="1.2">交互组件</text>
+    <line x1="0" y1="10" x2="336" y2="10" stroke="#E3EAE6" stroke-width="1"/>
+    <g transform="translate(0 22)">
+      <rect x="0" y="0" width="336" height="72" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="11" fill="none" stroke="#D97757" stroke-width="1.5"/>
+      <text x="28" y="32" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#D97757">SOS</text>
+      <text x="52" y="30" class="mono" font-size="14" font-weight="700" fill="#1A2E2A">sos-button</text>
+      <text x="52" y="50" class="sans" font-size="12" fill="#8B9A92">紧急求助按钮,赤陶强调</text>
+      <text x="16" y="64" class="mono" font-size="10" fill="#8B9A92">components/sos-button</text>
+    </g>
+    <g transform="translate(0 104)">
+      <rect x="0" y="0" width="336" height="72" rx="8" fill="#FFFFFF" stroke="#2E7D6B" stroke-width="1"/>
+      <rect x="16" y="16" width="24" height="24" rx="4" fill="none" stroke="#2E7D6B"/>
+      <path d="M 21 28 L 26 33 L 35 22" fill="none" stroke="#2E7D6B" stroke-width="1.4"/>
+      <text x="52" y="30" class="mono" font-size="14" font-weight="700" fill="#1A2E2A">auth</text>
+      <text x="52" y="50" class="sans" font-size="12" fill="#8B9A92">鉴权拦截,未登录跳转</text>
+      <text x="16" y="64" class="mono" font-size="10" fill="#8B9A92">components/auth</text>
+    </g>
+  </g>
+</svg>

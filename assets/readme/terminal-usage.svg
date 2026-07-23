@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%" role="img" aria-labelledby="termTitle termDesc">
+  <title id="termTitle">快速开始</title>
+  <desc id="termDesc">康禾医养微信小程序快速开始:git clone 克隆仓库,再用微信开发者工具导入项目根目录。</desc>
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <!-- 画布背景 -->
+  <rect x="0" y="0" width="1200" height="200" rx="24" fill="#F4F7F5"/>
+
+  <!-- 标题 -->
+  <g transform="translate(56 40)">
+    <text x="0" y="0" class="sans" font-size="26" font-weight="700" fill="#1A2E2A">快速开始</text>
+  </g>
+
+  <!-- 终端窗口 -->
+  <g transform="translate(56 58)">
+    <rect x="0" y="0" width="1088" height="80" rx="10" fill="#1A2E2A"/>
+    <!-- 终端标题条(功能化,非装饰) -->
+    <rect x="0" y="0" width="1088" height="24" rx="10" fill="#2E7D6B" opacity="0.18"/>
+    <rect x="0" y="14" width="1088" height="10" fill="#2E7D6B" opacity="0.18"/>
+    <text x="16" y="16" class="mono" font-size="11" fill="#8B9A92">bash</text>
+    <!-- 命令行 -->
+    <text x="20" y="52" class="mono" font-size="14" fill="#D97757" font-weight="700">$</text>
+    <text x="36" y="52" class="mono" font-size="14" fill="#F4F7F5">git clone https://github.com/liem0352/kanghe-medical-care-miniprogram.git</text>
+    <text x="20" y="70" class="mono" font-size="11" fill="#8B9A92"># 打开微信开发者工具 → 导入项目 → 选择仓库根目录(含 project.config.json)</text>
+  </g>
+
+  <!-- 底部步骤提示 -->
+  <g transform="translate(56 162)">
+    <text x="0" y="0" class="sans" font-size="13" fill="#5C6E66">导入后填写 AppID,在 utils/api.js 配置 BASE_URL,即可真机预览</text>
+  </g>
+</svg>

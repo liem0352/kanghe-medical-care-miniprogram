@@ -40,23 +40,21 @@
 | `sos-button` | `components/sos-button` | 紧急求助按钮,赤陶强调色突出 |
 | `auth` | `components/auth` | 鉴权拦截组件,未登录跳转登录页 |
 
----
+5 个组件按职责分为容器、卡片、交互三类,跨页面复用以降低重复 UI 成本。
 
-## 这是什么
-
-一个用**微信小程序原生框架(WXML + WXSS + JS)**编写的康禾医养客户端,为长辈和慢病患者在微信内提供一站式健康监测、医疗服务和家庭关怀入口。
-
-## 为什么不同
-
-- **原生小程序,非跨端框架**:直接使用微信小程序原生 `app.json` / `pages` / `components`,无 uni-app / Taro 中间层,运行时与微信能力贴合更紧。
-- **9 个真实页面**:每一项功能都是 `pages/` 下独立的 `.wxml/.wxss/.js/.json` 四件套,而不是占位。
-- **5 个自定义组件**:`modal` / `doctor-card` / `health-card` / `sos-button` / `auth`,跨页面复用,降低重复 UI 成本。
-- **SOS 一键紧急求助**:`components/sos-button` + `services/sos.js` 把紧急场景做成组件化能力,而非散落在各页面。
-- **服务层独立**:`services/medical`、`services/scheduler`、`services/sos` 把业务逻辑从页面 JS 中抽离,页面只负责渲染与事件。
+<p align="center">
+  <img src="./assets/readme/component-library.svg" alt="组件库分类" width="100%">
+</p>
 
 ---
 
-## 工作原理:小程序分层架构
+## 工作原理:页面架构与分层
+
+<p align="center">
+  <img src="./assets/readme/page-architecture.svg" alt="页面架构图" width="100%">
+</p>
+
+4 个 tabBar 页面(首页 / 医疗服务 / 健康 / 我的)作为入口,5 个二级页面(慢病管理 / 在线咨询 / 用药管理 / 家庭管理 / 登录)通过页面跳转进入。`components/auth` 在需要登录的页面外层包一层,统一拦截未授权访问。
 
 ```
 康禾医养/
@@ -99,11 +97,33 @@
     └── tab-icons/         首页/医疗/健康/我的 四态图标
 ```
 
-数据流:`页面 WXML 事件` → `页面 JS` → `services/*` 业务编排 → `utils/api.js` 网络请求 → 渲染回 `components/*` 复用组件。`components/auth` 在需要登录的页面外层包一层,统一拦截未授权访问。
+数据流:`页面 WXML 事件` → `页面 JS` → `services/*` 业务编排 → `utils/api.js` 网络请求 → 渲染回 `components/*` 复用组件。
+
+### 技术栈
+
+<p align="center">
+  <img src="./assets/readme/tech-stack.svg" alt="技术栈" width="100%">
+</p>
+
+- **原生小程序,非跨端框架**:直接使用微信小程序原生 `app.json` / `pages` / `components`,无 uni-app / Taro 中间层,运行时与微信能力贴合更紧。
+- **服务层独立**:`services/medical`、`services/scheduler`、`services/sos` 把业务逻辑从页面 JS 中抽离,页面只负责渲染与事件。
+- **SOS 一键紧急求助**:`components/sos-button` + `services/sos.js` 把紧急场景做成组件化能力,而非散落在各页面。
+
+### 用户旅程
+
+<p align="center">
+  <img src="./assets/readme/user-journey.svg" alt="用户旅程" width="100%">
+</p>
+
+从授权登录到用药管理构成核心路径,SOS 紧急求助作为旁路随时可触发,不依赖主流程位置。
 
 ---
 
 ## 如何使用
+
+<p align="center">
+  <img src="./assets/readme/terminal-usage.svg" alt="快速开始" width="100%">
+</p>
 
 ### 前置要求
 
@@ -154,8 +174,12 @@
 
 ---
 
+<p align="center">
+  <img src="./assets/readme/footer.svg" alt="README footer" width="100%">
+</p>
+
 ## License
 
-MIT License · 作者 **liem**
+MIT License,作者 **liem**
 
 > 本项目面向老年人与慢病患者的微信小程序场景,SOS 紧急求助仅作为客户端触发能力,实际救助链路需与本地医疗机构/紧急联系人服务对接。
